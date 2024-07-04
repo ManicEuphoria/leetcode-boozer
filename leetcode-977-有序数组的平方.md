@@ -68,15 +68,15 @@ python
 class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]:
         l, r = 0, len(nums) - 1
-    		res = []
-		    while l <= r:
-        		if nums[l] ** 2 > nums[r] ** 2:
-            		res.append(nums[l] ** 2)
-            		l += 1
-        		else:
-            		res.append(nums[r] ** 2)
-            		r -= 1
-    		return res[::-1]
+	res = []
+    	while l <= r:
+	    if nums[l] ** 2 > nums[r] ** 2:
+		res.append(nums[l] ** 2)
+		l += 1
+	    else:
+		res.append(nums[r] ** 2)
+		r -= 1
+    return res[::-1]
 ```````
 
 
@@ -116,19 +116,19 @@ python
 class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]:
         l, r = 0, len(nums) - 1
-    		res = [0] * (len(nums))  # 创建一个长度与nums相同的列表，初始化为0
-		    k = len(nums) - 1
+	res = [0] * (len(nums))  # 创建一个长度与nums相同的列表，初始化为0
+    	k = len(nums) - 1
 
-    		while l <= r:
-        		if nums[l] ** 2 > nums[r] ** 2:
-            		res[k] = nums[l] ** 2
-		            l += 1
-    		    else:
-        		    res[k] = nums[r] ** 2
-            		r -= 1
-		        k -= 1
+	while l <= r:
+	    if nums[l] ** 2 > nums[r] ** 2:
+		res[k] = nums[l] ** 2
+	        l += 1
+	    else:
+	    	res[k] = nums[r] ** 2
+		r -= 1
+		k -= 1
 
-    		return res
+	return res
 ```
 
 
