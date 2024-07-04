@@ -1,0 +1,138 @@
+
+
+## 题目
+
+1. 题目链接： https://leetcode.cn/problems/squares-of-a-sorted-array/
+
+
+
+## 解法
+
+
+
+### 暴力解法
+
+ruby
+
+```ruby
+# @param {Integer[]} nums
+# @return {Integer[]}
+def sorted_squares(nums)
+  nums.each { |n| nums[n] **= 2 }
+  nums.sort
+end
+```
+
+python
+
+`````````python
+class Solution:
+    def sortedSquares(self, nums: List[int]) -> List[int]:
+        nums = [x ** 2 for x in nums]
+        nums.sort()
+        return nums
+            
+`````````
+
+时间复杂度：$O（n\log n）$
+
+空间复杂度：$O（1）$
+
+
+
+### 双指针数组反转法
+
+ruby
+
+```ruby
+# @param {Integer[]} nums
+# @return {Integer[]}
+def sorted_squares(nums)
+  l, r, res = 0, nums.length - 1, []
+  while l <= r
+    if nums[l] ** 2 > nums[r] ** 2
+      res << nums[l] ** 2
+      l += 1
+    else
+      res << nums[r] ** 2
+      r -= 1
+    end
+  end
+  res.reverse
+end
+```
+
+python
+
+```````python
+class Solution:
+    def sortedSquares(self, nums: List[int]) -> List[int]:
+        l, r = 0, len(nums) - 1
+    		res = []
+		    while l <= r:
+        		if nums[l] ** 2 > nums[r] ** 2:
+            		res.append(nums[l] ** 2)
+            		l += 1
+        		else:
+            		res.append(nums[r] ** 2)
+            		r -= 1
+    		return res[::-1]
+```````
+
+
+
+时间复杂度：$O（n）$
+
+空间复杂度：$O（n）$
+
+### 双指针新建数组法
+
+ruby
+
+```ruby
+# @param {Integer[]} nums
+# @return {Integer[]}
+def sorted_squares(nums)
+  l, r, res = 0, nums.length - 1, Array.new(nums.length - 1)
+  k = nums.length - 1
+
+  while l <= r
+    if nums[l] ** 2 > nums[r] ** 2
+      res[k] = nums[l] ** 2
+      l += 1
+    else
+      res[k] = nums[r] ** 2
+      r -= 1
+    end
+    k -= 1
+  end
+  res
+end
+```
+
+python
+
+```python
+class Solution:
+    def sortedSquares(self, nums: List[int]) -> List[int]:
+        l, r = 0, len(nums) - 1
+    		res = [0] * (len(nums))  # 创建一个长度与nums相同的列表，初始化为0
+		    k = len(nums) - 1
+
+    		while l <= r:
+        		if nums[l] ** 2 > nums[r] ** 2:
+            		res[k] = nums[l] ** 2
+		            l += 1
+    		    else:
+        		    res[k] = nums[r] ** 2
+            		r -= 1
+		        k -= 1
+
+    		return res
+```
+
+
+
+时间复杂度：$O（n）$
+
+空间复杂度：$O（n）$
