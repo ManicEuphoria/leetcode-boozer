@@ -1,5 +1,5 @@
 require_relative '../spec_helper'
-require_relative '../../lib/linked_list/707'
+require_relative '../../lib/linked_list/medium/707'
 
 RSpec.describe MyLinkedList do
   before(:each) do

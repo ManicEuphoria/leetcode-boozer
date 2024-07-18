@@ -1,4 +1,3 @@
-require 'rspec'
 require_relative '../../lib/hash/242'
 
 RSpec.describe 'is_anagram' do

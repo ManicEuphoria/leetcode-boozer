@@ -1,5 +1,4 @@
-require 'rspec'
-require_relative '../../../lib/array/easy/977'
+require_relative '../../lib/array/easy/977'
 
 RSpec.describe 'sorted_squares' do
   it 'returns the squares of a sorted array in non-decreasing order' do
