@@ -1,5 +1,16 @@
+# Problem Interview 02.07: Intersection of Two Linked Lists LCCI
+# Difficulty: Easy
+# Category: Linked List, Two Pointers
+# Link: https://leetcode.com/problems/intersection-of-two-linked-lists-lcci/
+#
+# 题目描述：
+# 给你两个单链表的头节点 headA 和 headB，请你找出并返回两个单链表相交的起始节点。如果两个链表没有交点，返回 null。
+#
+# @param {ListNode} head_a 第一个链表的头节点
+# @param {ListNode} head_b 第二个链表的头节点
+# @return {ListNode} 相交的起始节点，如果不相交则返回nil
 class Solution
-  def get_intersection_node(head_a, head_b) # 获取两个链表的交点
+  def get_intersection_node(head_a, head_b)
     return nil if head_a.nil? || head_b.nil? # 如果任意一个链表为空，返回nil
 
     length_a = get_length(head_a) # 获取链表A的长度
@@ -38,4 +49,4 @@ class Solution
     step.times { current = current.next } # 移动step次
     current # 返回移动后的当前节点
   end
-end
+end 

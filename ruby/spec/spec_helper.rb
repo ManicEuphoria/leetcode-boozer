@@ -20,5 +20,5 @@ RSpec.configure do |config|
   config.default_formatter = "doc" if config.files_to_run.one?
 
   # 允许在测试失败时停止运行后续测试。
-  # config.fail_fast = true
+  config.fail_fast = true
 end
