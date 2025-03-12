@@ -4,7 +4,9 @@
 
 | 题目编号 | 题目名称 | 难度 | 分类 | 解题代码 |
 |---------|---------|------|------|----------|
-| 977 | [有序数组的平方](https://leetcode.com/problems/squares-of-a-sorted-array/) | Easy | 数组, 双指针 | [Ruby](/ruby/977.rb) |
+| 27 | [移除元素](https://leetcode.cn/problems/remove-element/) | Easy | 数组, 双指针 | [Ruby](/ruby/27.rb)/[Python](/python/27.py) |
+| 704 | [二分查找](https://leetcode.cn/problems/binary-search/) | Easy | 数组, 二分查找 | [Ruby](/ruby/704.rb)/[Python](/python/704.py) |
+| 977 | [有序数组的平方](https://leetcode.cn/problems/squares-of-a-sorted-array/) | Easy | 数组, 双指针 | [Ruby](/ruby/977.rb)/[Python](/python/977.py) |
 
 ## 解题技巧
 
